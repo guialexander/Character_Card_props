@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types';
 import CharacterCard from './Componentes/CharacterCard';
 import data from "./assets/data.json";
 import './App.css'
@@ -15,8 +16,8 @@ function App() {
         <div className="container">
           {charters.map((charter,index)=>{
             return <CharacterCard
-            charter= {charter}
-            id={index}
+            charter={charters}
+            key={index}
             />
           })
 
